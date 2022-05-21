@@ -1,0 +1,165 @@
+% this doesn't compile in the latex-workshop extension in vscode but does on overleaf (idk why)
+% template used: https://www.overleaf.com/latex/templates/my-resume/rqzfybxqvpny
+
+\documentclass[%singlesided,
+    doublesided,
+    paper=a4,
+    fontsize=10pt
+    ]{my-resume}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% set geometry
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setlength\highlightwidth{8cm}
+\setlength\headerheight{4cm}            % note that margintop gets added to this value, i.e. the header bar is 5cm
+\setlength\marginleft{1cm}
+\setlength\marginright{\marginleft}      % needs to be 1.5 times to be actually equal. why?
+\setlength\margintop{1cm}
+\setlength\marginbottom{1cm}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% FONTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\RequirePackage{fontspec}
+\setmainfont{Carlito}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% COLORS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\colorlet{highlightbarcolor}{lightgray}
+\colorlet{headerbarcolor}{darkgray}
+
+\colorlet{headerfontcolor}{white}
+\colorlet{accent}{awesome-red}
+\colorlet{heading}{black}
+\colorlet{emphasis}{black}
+\colorlet{body}{black}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% set document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+\name{Samridh Anand Paatni}
+\tagline{
+    I am passionate web development and programming enthusiast, interested in \\Cybersecurity and Neural Networks.\\
+    My other interests include cooking, learning about languages and playing table tennis.
+}
+\photo[round]{picture.jpg}{\dimexpr\headerheight-\marginbottom}   % make photo exactly match the header with margintop/marginright/marginbottom as margin
+
+\makeheader
+
+\highlightbar{
+
+    \section{Contact}
+    
+    \email{samridh.anand.paatni@gmail.com}
+    \phone{+91 8400400383}
+    \phone{+91 8077339033}
+    \location{VIT, Chennai Campus}
+    \vspace{0.5em}
+    \homepage{www.samridh.live}{https://www.samridh.live}
+    \github{@The5thAxiom}{https://github.com/The5thAxiom}
+    \linkedin{Samridh Anand Paatni}{https://www.linkedin.com/in/samridh-anand-paatni-57a045215/}
+    
+    \section{Skills}
+    
+    \skillsection{General Programming}
+    \skill{Python}{4}
+    \skill{C}{4}
+    \skill{C++}{3}
+    \skill{Java}{3}
+    \skill{Scala}{3}
+    
+    \vspace{0.5em}
+    \skillsection{Web Development}
+    \skill{HTML}{4}
+    \skill{CSS}{4}
+    \skill{Vanilla Javascript}{4}
+    \skill{Typescript}{3}
+    \skill{React.js}{4}
+    
+    \vspace{0.5em}
+    \skillsection{Operating Systems}
+    \skill{Linux}{3}
+    \skill{Windows}{4}
+    
+    \vspace{0.5em}
+    \skillsection{Software \& Tools}
+    \skill{Office}{5}
+    \skill{git/github}{4}
+    \skill{LaTeX}{4}
+    \skill{Terminal}{4}
+    
+    \vspace{0.5em}
+    \skillsection{Languages}
+    \skill{English}{5}
+    \skill{Hindi}{5}
+    \skill{Spanish}{2}
+    \bigskip
+    
+    % \section{Certifications}
+    % \simpleskill{}
+    % \simpleskill{AWS certified ML Specialist}
+    % \simpleskill{Databricks Lakehouse Platform}
+    
+}
+\mainbar{
+    \section[\faMortarBoard]{Education}
+    \job{June, 2020}
+    {The Millennium School, Lucknow}
+    {Class XII$^{th}$ (91.2\%, PCM)}
+    {}
+    \vspace{1em}
+    \job{September, 2020 to Present}
+    {VIT Chennai Campus}
+    {B.Tech CSE}
+    {}
+    
+    \section{Experience}
+    \job{October, 2020 to Present}
+    {VIT, Chennai}
+    {Member of Linux Club}
+    {Helped organise \href{https://lugvitc.github.io/#/events#adrenaline}{Adrenalind/FOSS-Day event}, working on club website.
+        
+        \section{Projects}
+        \begin{itemize}
+            \item \textbf{Linux Club Website}: Website for VIT Chennai Linux Club. Made using React.js.\\
+                  \url{https://lugvitc.github.io}
+                  \vspace{1em}
+            \item \textbf{Cookbook Website}: Website to showcase recipes. Made using React (typescript) frontend and Flask backend.Hosted on heroku.\\ \url{https://cookbook-demo-the5thaxiom.herokuapp.com/#/}
+                  \vspace{1em}
+            \item \textbf{`Samazon', Ecommerce Website}: Mock e-commerce website made using HTML, CSS, JS and PHP.\\
+                  \url{https://samazon-demo-the5thaxiom.herokuapp.com/}
+                  \vspace{1em}
+            \item \textbf{VITC Professors Web Scraper}: A simple web scraper to get information about our faculty at VIT Chennai. Made for Adrenaline/FOSS Day.
+                  \vspace{1em}
+            \item \textbf{Portfolio Website}: Portfolio site made using React (typescript).
+        \end{itemize}
+        
+        \section{Courses and Certificates}
+        \begin{itemize}
+            \item \textbf{Coursera}: Neural Networks And Deep Learning. An introduction to neural networks, taught by Andrew Ng.
+                  \vspace{1em}
+            \item \textbf{Coursera}: Functional Programming Principles in Scala. An introduction to the Scala Programming Language and to Functional Programming. Taught by Martin Odersky.
+                  \vspace{1em}
+            \item \textbf{Workshop}: Dynamic Web Development Workshop held in VIT, Chennai. Detailed how to use HTML, CSS and PHP to create web application.
+        \end{itemize}
+        
+        \section{Achievements, honours and awards}
+        \achievement{Winning Team Member in `Cyber Defenders', CTF Event}{Cyber Defenders was a capture-the-flag event conducted by Cyscom, VIT Chennai's chapter of OWASP. It consisted of finding flags hidded in plain sight by using our cybersecurity and hacking knowledge. My team stood first in the event.}
+    }
+}
+\makebody
+\clearpage
+
+\end{document}
